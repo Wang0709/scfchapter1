@@ -13,6 +13,7 @@ public class HiController {
 
     @GetMapping(value = "/hi")
     public String sayHi(@RequestParam String name){
+        System.out.println("From feign");
         return  schedualServiceHi.sayHiFromClientOne(name);
     }
 
